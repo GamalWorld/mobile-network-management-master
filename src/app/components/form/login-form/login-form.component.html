@@ -1,0 +1,29 @@
+<form [formGroup]="loginUserForm" (ngSubmit)="handleSubmit()" class="card p-4 rounded shadow-lg">
+  <h2 class="px-1 text-primary"><b>Please log in</b></h2>
+  <hr>
+  <!--  email input-->
+  <app-custom-input
+    [form]="loginUserForm"
+    label="E-mail address"
+    controlName="email"
+    type="text"
+    placeholder="Enter your e-mail..."
+  ></app-custom-input>
+  <!--  password input-->
+  <app-custom-input
+    [form]="loginUserForm"
+    label="Password"
+    controlName="password"
+    type="password"
+    placeholder="Enter your password..."
+  ></app-custom-input>
+  <!--  Submit button  -->
+  <button type="submit" class="btn btn-primary my-3">Log in</button>
+  <!--  <hr>-->
+  <!--  todo: google input here-->
+  <button style="background: white; border: white; color: #888888; box-shadow: 0px 1px grey;" class="btn btn-primary my-3">
+    <svg-icon src="assets/img/googleLogo.svg" [svgStyle]="{ 'width.px':20, 'height.px': 20 }"></svg-icon>
+    Log in with Google
+  </button>
+  <!--  <pre>{{loginUserForm.value | json}}</pre>-->
+</form>
